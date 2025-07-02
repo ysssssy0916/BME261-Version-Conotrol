@@ -1,6 +1,6 @@
 function updateCountdown() {
     const now = new Date();
-    const end = new Date("2025-08-12T11:30:00-04:00");
+    const end = new Date(2025, 7, 12, 11, 30, 0); // August 12, 2025 11:30 AM
     const diff = end - now;
 
     if (diff <= 0) {
@@ -9,7 +9,7 @@ function updateCountdown() {
     }
 
     const seconds = Math.floor(diff / 1000);
-    document.getElementById("countdown").innerText = \`\${seconds.toLocaleString()} seconds remaining until end of term.\`;
+    document.getElementById("countdown").innerText = `${seconds.toLocaleString()} seconds remaining until end of term.`;
 }
 
 setInterval(updateCountdown, 1000);
